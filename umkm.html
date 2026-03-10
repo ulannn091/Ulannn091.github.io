@@ -4,86 +4,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wulan Novia Boba | Toko Online</title>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Nunito', sans-serif; }
+        .font-fredoka { font-family: 'Fredoka', cursive; }
+        .bg-cream { background-color: #F4F1E6; }
+        .text-teal { color: #2D8B8B; }
+        .bg-teal { background-color: #2D8B8B; }
+        .text-brown { color: #6B4F3B; }
+        .bg-brown { background-color: #6B4F3B; }
+    </style>
 </head>
-<body>
+<body class="bg-cream text-gray-800">
 
-    <nav class="navbar">
-        <div class="container nav-content">
-            <div class="logo">
-                <img src="logo_boba.png" alt="Logo Wulan Novia">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-teal rounded-full flex items-center justify-center text-white text-xl">🧋</div>
+                <span class="font-fredoka text-xl text-brown font-bold">Wulan Novia</span>
             </div>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Order Now</a></li>
-                <li><a href="#">About Us</a></li>
-                <li class="cart-icon">🛒<span>0</span></li>
-            </ul>
+            <div class="hidden md:flex space-x-8 font-semibold text-teal">
+                <a href="#" class="hover:text-brown transition">Home</a>
+                <a href="#" class="hover:text-brown transition">Menu</a>
+                <a href="#" class="hover:text-brown transition">Order Now</a>
+                <a href="#" class="hover:text-brown transition">About Us</a>
+            </div>
+            <div class="relative cursor-pointer">
+                <span class="text-2xl">🛒</span>
+                <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+            </div>
         </div>
     </nav>
 
-    <section class="hero container">
-        <div class="hero-text">
-            <h1>Nikmati Kesegaran Boba Wulan Novia!</h1>
-            <a href="https://wa.me/628893620711" class="btn-wa">
-                Pesan via WhatsApp Sekarang! <span>↗</span>
+    <!-- Hero Section -->
+    <header class="max-w-6xl mx-auto px-6 py-12 md:py-20 flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 space-y-6">
+            <h1 class="font-fredoka text-4xl md:text-6xl text-brown leading-tight">
+                Nikmati Kesegaran <br>
+                <span class="text-teal">Boba Wulan Novia!</span>
+            </h1>
+            <p class="text-lg text-gray-600 max-w-md">
+                Minuman boba segar dengan bahan berkualitas dan topping melimpah untuk menemani hari-harimu.
+            </p>
+            <a href="https://wa.me/628893620711" target="_blank" class="inline-flex items-center space-x-3 bg-teal text-white px-8 py-4 rounded-full font-bold shadow-lg hover:bg-opacity-90 transition transform hover:-translate-y-1">
+                <span>Pesan via WhatsApp Sekarang!</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                </svg>
             </a>
-            <div class="contact-info">
-                <p>Contact info</p>
-                <h3>📞 +62 889-3620-711</h3>
+            <div class="pt-6 border-t border-gray-200">
+                <p class="text-sm text-gray-500 font-bold uppercase tracking-widest">Contact Info</p>
+                <p class="text-2xl font-bold text-brown">+62 889-3620-711</p>
             </div>
         </div>
-        <div class="hero-image">
-            <img src="banner_vertikal.jpg" alt="Banner Boba Segar">
+        <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center relative">
+            <!-- Decorative circle -->
+            <div class="absolute inset-0 bg-teal opacity-10 rounded-full blur-3xl"></div>
+            <!-- Banner Placeholder -->
+            <div class="relative z-10 w-full max-w-xs bg-white p-4 rounded-3xl shadow-2xl border-8 border-white transform rotate-3">
+                <div class="bg-gray-200 w-full aspect-[9/16] rounded-2xl flex items-center justify-center text-gray-400">
+                    <p class="text-center p-4">Gambar Banner Vertikal Anda Disini</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu Section -->
+    <section class="bg-white py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="font-fredoka text-3xl text-brown text-center mb-12">Menu Unggulan</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-cream p-6 rounded-3xl text-center space-y-4 shadow-sm hover:shadow-md transition">
+                    <div class="bg-gray-200 w-full h-48 rounded-2xl mb-4 overflow-hidden">
+                        <div class="w-full h-full flex items-center justify-center text-gray-400">Matcha Image</div>
+                    </div>
+                    <h3 class="font-bold text-xl text-brown">Wulzka Matcha</h3>
+                    <p class="text-teal font-bold text-lg">Rp 5.000</p>
+                    <button class="w-full bg-teal text-white py-3 rounded-xl font-bold hover:bg-opacity-90">Add to Cart</button>
+                </div>
+                <!-- Product 2 -->
+                <div class="bg-cream p-6 rounded-3xl text-center space-y-4 shadow-sm hover:shadow-md transition">
+                    <div class="bg-gray-200 w-full h-48 rounded-2xl mb-4 overflow-hidden">
+                        <div class="w-full h-full flex items-center justify-center text-gray-400">Oreo Image</div>
+                    </div>
+                    <h3 class="font-bold text-xl text-brown">Chocolate Oreo</h3>
+                    <p class="text-teal font-bold text-lg">Rp 5.000</p>
+                    <button class="w-full bg-teal text-white py-3 rounded-xl font-bold hover:bg-opacity-90">Add to Cart</button>
+                </div>
+                <!-- Product 3 -->
+                <div class="bg-cream p-6 rounded-3xl text-center space-y-4 shadow-sm hover:shadow-md transition">
+                    <div class="bg-gray-200 w-full h-48 rounded-2xl mb-4 overflow-hidden">
+                        <div class="w-full h-full flex items-center justify-center text-gray-400">Classic Image</div>
+                    </div>
+                    <h3 class="font-bold text-xl text-brown">Classic Boba</h3>
+                    <p class="text-teal font-bold text-lg">Rp 5.000</p>
+                    <button class="w-full bg-teal text-white py-3 rounded-xl font-bold hover:bg-opacity-90">Add to Cart</button>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="menu-section container">
-        <h2 class="section-title">Menu Unggulan</h2>
-        <div class="menu-grid">
-            <div class="menu-card">
-                <img src="matcha.jpg" alt="Wulzka Matcha">
-                <h3>Wulzka Matcha</h3>
-                <p>Rp 5.000</p>
-                <button class="btn-cart">Add to Cart</button>
+    <!-- Footer -->
+    <footer class="bg-brown text-white py-12">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div>
+                <h4 class="font-fredoka text-xl mb-4">Contact Us</h4>
+                <p class="text-gray-300">📞 +62 889-3620-711</p>
+                <p class="text-gray-300 italic">"Wulan Novia - Segarkan Harimu!"</p>
             </div>
-            <div class="menu-card">
-                <img src="choco.jpg" alt="Chocolate Oreo">
-                <h3>Chocolate Oreo</h3>
-                <p>Rp 5.000</p>
-                <button class="btn-cart">Add to Cart</button>
+            <div>
+                <h4 class="font-fredoka text-xl mb-4 text-center md:text-left">Social Media</h4>
+                <div class="flex space-x-4 justify-center md:justify-start">
+                    <span class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center cursor-pointer hover:bg-teal transition">IG</span>
+                    <span class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center cursor-pointer hover:bg-teal transition">FB</span>
+                    <span class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center cursor-pointer hover:bg-teal transition">TT</span>
+                </div>
             </div>
-            <div class="menu-card">
-                <img src="classic.jpg" alt="Classic">
-                <h3>Classic</h3>
-                <p>Rp 5.000</p>
-                <button class="btn-cart">Add to Cart</button>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <h4>Contact us</h4>
-                <p>+62 889-3620-711</p>
-                <p>Wulan Novia Store</p>
-            </div>
-            <div class="footer-col">
-                <h4>Social Media</h4>
-                <div class="social-icons">📲 📸 📘 🎵</div>
-            </div>
-            <div class="footer-col">
-                <h4>About</h4>
-                <p>Minuman boba segar pilihan dengan topping bervariasi untuk harimu yang lebih ceria.</p>
+            <div>
+                <h4 class="font-fredoka text-xl mb-4">About</h4>
+                <p class="text-sm text-gray-300 leading-relaxed">
+                    Minuman boba kekinian yang dibuat dengan hati oleh Wulan Novia. Menghadirkan rasa autentik dan topping berkualitas.
+                </p>
             </div>
         </div>
-        <p class="copyright">Copyright &copy; Wulan Novia 2026</p>
+        <div class="text-center mt-12 pt-8 border-t border-white border-opacity-10 text-xs text-gray-400">
+            Copyright &copy; 2026 Wulan Novia Boba. All Rights Reserved.
+        </div>
     </footer>
 
-    <a href="#" class="wa-float">💬</a>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/628893620711" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition z-50">
+        <svg viewBox="0 0 24 24" class="w-8 h-8 fill-current">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.767 5.767 0 1.267.405 2.436 1.087 3.389l-.694 2.54 2.603-.683c.847.492 1.833.777 2.887.777 3.181 0 5.767-2.586 5.767-5.767 0-3.181-2.586-5.767-5.767-5.767zm3.344 8.205c-.131.363-.755.708-1.042.748-.287.04-.572.062-.857.062-.871 0-1.745-.308-2.484-.877-.739-.569-1.332-1.352-1.724-2.227-.392-.875-.522-1.782-.412-2.65.11-.868.513-1.638 1.154-2.213l.231-.205c.132-.117.34-.117.472 0l.924.819c.132.117.132.302 0 .419l-.369.327c-.132.117-.132.302 0 .419l1.477 1.309c.132.117.34.117.472 0l.369-.327c.132-.117.34-.117.472 0l.924.819c.132.117.132.302 0 .419l-.231.205z"/>
+        </svg>
+    </a>
 
 </body>
-</html>
+                            </html>
